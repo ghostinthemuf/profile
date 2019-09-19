@@ -1,14 +1,16 @@
 body {
-  background-color : white;
-  color: #45596e;
-  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #58728d;
+  background-image: linear-gradient(to bottom, #58728d, #45596e);
+  color: rgb(65, 65, 65);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
   margin: 0;
   padding: 0;
 }
 
 h1, h2, h3, h4, h5 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
 }
 
 a {
@@ -23,8 +25,6 @@ a {
 }
 
 .sidebar {
-  background-color: #58728d;
-  background-image: linear-gradient(to bottom, #58728d, #45596e);
   color: white;
   width: 24%;
   min-width: 250px;
@@ -36,6 +36,12 @@ a {
   padding: 48px;
   box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
   position: relative;
+  background-color : white;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  margin-right: 60px;
+  margin-left: 0;
+  border-radius: 6px;
 }
 
 .img-round {
@@ -75,50 +81,36 @@ a {
   box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
 }
 
-
-
-
-
-.muf {
-  position: absolute;
-  left: 257px;
-  background: white;
-  border: none;
-  padding: 20px;
-  border-radius: 20px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
-}
-
 .tab {
   position: absolute;
-  left: -120px;
-  top: 600px;
-  width: 120px;
-  background: white;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-  height: 80px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+  left: -140px;
+  width: 140px;
+  background-color: rgba(255, 255, 255, 0);
+  border-top-left-radius: 12px;
+  border-bottom-left-radius: 12px;
+  height: 64px;
+  cursor: pointer;
 }
 
 .tab-int {
-  background: white;
-  height: 80px;
+  background-color: rgba(255, 255, 255, 0);
+  height: 64px;
   text-align: left;
   position: absolute;
-  left: 30px;
+  left: 12px;
   width: 140px;
   display: flex;
   align-items: center;
+  font-size: 24px;
 }
 
 .tab-int:before, .tab-int:after {
   content: "";
-  background: white;
+  background-color: rgba(255, 255, 255, 0);
   height: 30px;
   width: 30px;
   position: absolute;
-  left: 90px;
+  left: 128px;
 }
 
 .tab-int:before {
@@ -127,6 +119,82 @@ a {
 
 .tab-int:after {
   bottom: -15px;
+}
+
+#competences-title {
+  top: 50%;
+}
+
+#realisations-title {
+  top: 60%;
+}
+
+#formation-title {
+  top: 70%;
+}
+
+.tab-icon {
+  color: white;
+  width:  60px;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: -85px;
+}
+
+.tab-skill {
+  width: 100%;
+}
+
+.tab-skill h5 {
+  color: white;
+  /* margin-right: 40px; */
+}
+
+.tab-active {
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.tab-active .tab-int {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.tab-active .tab-int:before {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+.tab-active .tab-int:after {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+
+.tab-active .tab-skill h5 {
+  color: rgb(65, 65, 65);
+}
+
+.tab {
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.3) 25%, transparent 50%, transparent);
+  background-position: 0 0;
+  background-size: 200% 100%;
+  transition: all .25s ease-in;
+}
+
+.tab:hover {
+  background-position: 100% 0;
+}
+
+.tab:hover .tab-skill h5 {
+  /* color: rgb(65, 65, 65); */
+}
+
+.content {
+  display: none;
+}
+
+.content-active {
+  display: block;
 }
 
 @media (max-width: 960px) {

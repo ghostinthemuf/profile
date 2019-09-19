@@ -6,7 +6,7 @@
     <meta name="description" content="Antoine Gaillard profile page.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900|Source+Sans+Pro:400,700&display=swap" >
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|PT+Sans:400,700&display=swap">
     <link rel="stylesheet" href="style.css">
     <title>Antoine Gaillard</title>
   </head>
@@ -14,6 +14,7 @@
   <body>
 
     <div class="container">
+
       <div class="sidebar">
         <img class="img-round" id="img-profile" src="images/antoinegaillard1.jpg" alt="portrait antoine gaillard">
         <h2>Get in touch</h2>
@@ -24,41 +25,48 @@
         </ul>
         <a href="https://www.agaillard.fr" class="btn-red">My projects</a>
       </div>
+
       <div class="main">
         <h1>Bonjour, je m'appelle Antoine Gaillard 😊</h1>
         <h2>Je suis développeur web fullstack</h2>
         <p>Après 10 ans au service de la communication d’ONG environnementales, j’ai décidé de faire de ma passion pour le code mon nouveau métier. Ayant suivi le bootcamp du Wagon Paris, je suis désormais à la recherche d’opportunités en matière de développement web back et front, avec une attention particulière pour le secteur de la tech for good.</p>
-
-        <div class="w3-sidebar w3-bar-block w3-light-grey w3-card" style="width:130px">
-          <button class="muf w3-bar-item w3-button tablink" onclick="openCity(event, 'London')">Compétences</button>
-          <button class="muf w3-bar-item w3-button tablink" onclick="openCity(event, 'Paris')">Réalisations</button>
-          <button class="muf w3-bar-item w3-button tablink" onclick="openCity(event, 'Tokyo')"><p class="cheat">Formation<p></button>
-        </div>
-
-        <div class="tab">
-          <div class="tab-int">Bonjour</div>
-        </div>
-
-        <div style="margin-left:130px">
-
-          <div id="London" class="w3-container city" style="display:none">
-            <p>London is the capital city of England.</p>
-            <p>It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+        <div class="tab tab-active" id="competences-title" data-domain="competences">
+          <div class="tab-int">
+            <div class="tab-icon"><i class="fas fa-brain"></i></div>
+            <div class="tab-skill"><h5>Compétences</h5></div>
           </div>
-
-          <div id="Paris" class="w3-container city" style="display:none">
-            <p>Paris is the capital of France.</p>
-            <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-          </div>
-
-          <div id="Tokyo" class="w3-container city" style="display:none">
-            <p>Tokyo is the capital of Japan.</p>
-            <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
-          </div>
-
         </div>
-
-
+        <div class="tab" id="realisations-title" data-domain="realisations">
+          <div class="tab-int">
+            <div class="tab-icon"><i class="fas fa-laptop"></i></div>
+            <div class="tab-skill"><h5>Réalisations</h5></div>
+          </div>
+        </div>
+        <div class="tab" id="formation-title" data-domain="formation">
+          <div class="tab-int">
+            <div class="tab-icon"><i class="fas fa-user-graduate"></i></div>
+            <div class="tab-skill"><h5>Formation</h5></div>
+          </div>
+        </div>
+        <div class="content content-active" id="competences">
+          <h3>Développement web</h3>
+          <ul>
+            <li>Backend : Ruby on Rails, SQL, Heroku</li>
+            <li>Frontend : Javascript ES2015, React JS, HTML, CSS, Bootstrap</li>
+          </ul>
+          <h3>Chef de projet web</h3>
+          <ul>
+            <li>Rédaction cahier des charges et appel à projets</li>
+            <li>Suivi de la conception de sites Wordpress & Drupal</li>
+            <li>Administration, visibilité et référencement</li>
+          </ul>
+        </div>
+        <div class="content" id="realisations">
+          <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
+        </div>
+        <div class="content" id="formation">
+          <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+        </div>
       </div>
 
     </div>
