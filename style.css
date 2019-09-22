@@ -1,77 +1,268 @@
 html {
-  font-size:100%;
+  font-size: 100%;
 }
 
 body {
-  background-color: #58728d;
-  background-image: linear-gradient(to bottom, #58728d, #45596e);
+  background-color: #5b7da0;
+  background-image: linear-gradient(to bottom, #7ca7d4, #5b7da0);
+  background-repeat: no-repeat;
   margin: 0;
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, p, li, .tab-active .tab-skill h5 {
-  color: rgb(30, 30, 30);
-}
-
-p, li {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 300;
-  font-size: 0.95rem;
-  line-height:1.5em;
+h1, h2, h3, h4, h5, p, li, a {
+  color: white;
 }
 
 h1, h2, h3, h4, h5 {
   font-family: 'Nunito Sans', sans-serif;
-  font-weight: 300;
 }
 
-.main h1 {
-  font-size: 2.5rem;
+p, li, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+p, li {
+  font-size: 1rem;
+  line-height: 1.5em;
 }
 
 a {
-  color: white;
   text-decoration: none;
 }
 
 .container {
   width: 100%;
-  height: 100vh;
-  display: flex;
-}
-
-.sidebar {
-  width: 24%;
-  min-width: 250px;
-  padding: 48px;
   text-align: center;
-}
-
-.sidebar, .sidebar h2 {
-  color: white;
-}
-
-.main {
-  padding: 48px;
-  position: relative;
-  background-color : white;
-  margin-top: 60px;
-  margin-bottom: 60px;
-  margin-right: 60px;
-  margin-left: 0;
-  border-radius: 2px;
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
 }
 
 .img-round {
   border-radius: 50%;
   box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+  margin: 24px 0;
+  width: 180px;
 }
 
-#img-profile {
-  width: 180px;
-  height: auto;
-  margin: 10px;
+.hello {
+  width: 30%;
+  max-width: 500px;
+  margin: 16px auto;
+  padding: 10px 16px;
+  background-color: white;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.hello:before {
+  content: "";
+  background-color: white;
+  transform: rotate(45deg);
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: -15px;
+  border-top-left-radius: 4px;
+}
+
+.hello h1 {
+  color: rgb(90, 90, 90);
+}
+
+.hello h1,
+.dev h2 {
+  font-size: 1.7rem;
+}
+
+.main {
+  width: 80%;
+  max-width: 1100px;
+  text-align: left;
+  margin: 24px auto;
+  position: relative;
+}
+
+.main h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main > p {
+  text-align: center;
+}
+
+.dev {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dev img {
+  height: 40px;
+  margin: 0 12px;
+}
+
+.dev h2 {
+  text-align: center;
+}
+
+.tabs {
+  margin: 32px 0 0 0;
+}
+
+.tab {
+  cursor: pointer;
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+}
+
+.tab h3 {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+.underscore {
+  position: absolute;
+  left: 0;
+  transition: 0.4s ease-in-out;
+  width: 33%;
+  height: 2px;
+  background: white;
+  margin: 0 auto;
+}
+
+#competences-title:hover ~ .underscore,
+.tabs div:nth-child(1).tab-active ~ .underscore {
+  left: 0%;
+}
+
+#realisations-title:hover ~ .underscore,
+.tabs div:nth-child(2).tab-active ~ .underscore {
+  left: 33.33%;
+}
+
+#formation-title:hover ~ .underscore,
+.tabs div:nth-child(3).tab-active ~ .underscore {
+  left: 66.7%;
+}
+
+.content {
+  display: none;
+  margin: 56px 0 0 0;
+}
+
+.content-active {
+  display: block;
+  min-height: 345px;
+}
+
+.content-container {
+  display: flex;
+  align-items: center;
+}
+
+#content-container-real,
+#content-container-form {
+  justify-content: space-evenly;
+}
+
+.banner {
+  background-size: cover;
+  background-position: center;
+  width: 44%;
+  height: 320px;
+  border-radius: 16px;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+.banner-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.banner h3 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.banner p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+.project-type {
+  margin-top: 0;
+}
+
+.btn-flat {
+  padding: 8px 16px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background: #D84E4E;
+  transition: background 0.3s ease;
+}
+
+.btn-flat:hover {
+  background: #1BCB7F;
+}
+
+#separator {
+  display: none;
+  height: 40px;
+}
+
+.curriculum {
+  display: flex;
+  align-items: center;
+  margin-left: 180px;
+  padding: 8px 24px 8px 68px;
+  position: relative;
+  border-bottom: 2px solid white;
+}
+
+.curriculum img {
+  width: 92px;
+}
+
+.curriculum h4 {
+  margin: 0;
+}
+
+.curriculum a {
+  position: absolute;
+  left: -30px;
+}
+
+.content-form {
+  width: 44%;
+}
+
+.content-form img {
+  width: 100%;
+}
+
+.footer {
+  width: 30%;
+  max-width: 500px;
+  margin: 64px auto;
+  padding: 20px 0;
+  text-align: center;
+  min-width: 296px;
+  border-radius: 16px;
+  border: 2px solid white;
+}
+
+.footer a {
+  color: white;
 }
 
 .list-inline {
@@ -85,159 +276,74 @@ a {
   font-size: 2em;
 }
 
-.btn-red {
-  background-color: rgba(230, 57, 70, 1);
-  color: white;
-  border-radius: 2px;
-  padding: 10px 15px;
-  display: inline-block;
-  margin: 10px;
-  font-size: 0.8em;
-  font-weight: bold;
-}
 
-.btn-red:hover {
-  box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
-}
+/* Media queries --------------------------------------------------------------------- */
 
-.tab {
-  position: absolute;
-  left: -140px;
-  width: 140px;
-  background-color: rgba(255, 255, 255, 0);
-  border-top-left-radius: 2px;
-  border-bottom-left-radius: 2px;
-  height: 64px;
-  cursor: pointer;
-}
+@media only screen and (max-width: 800px) {
 
-.tab-int {
-  background-color: rgba(255, 255, 255, 0);
-  height: 64px;
-  text-align: left;
-  position: absolute;
-  left: 12px;
-  width: 140px;
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-}
-
-.tab-int:before, .tab-int:after {
-  content: "";
-  background-color: rgba(255, 255, 255, 0);
-  height: 30px;
-  width: 30px;
-  position: absolute;
-  left: 128px;
-}
-
-.tab-int:before {
-  top: -15px;
-}
-
-.tab-int:after {
-  bottom: -15px;
-}
-
-#competences-title {
-  top: 50%;
-}
-
-#realisations-title {
-  top: 60%;
-}
-
-#formation-title {
-  top: 70%;
-}
-
-.tab-icon {
-  color: white;
-  width:  60px;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  left: -85px;
-}
-
-.tab-skill {
-  width: 100%;
-}
-
-.tab-skill h5 {
-  color: white;
-  /* margin-right: 40px; */
-}
-
-.tab-active {
-  background-color: rgba(255, 255, 255, 1);
-  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
-}
-
-.tab-active .tab-int {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-
-.tab-active .tab-int:before {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.tab-active .tab-int:after {
-  background-color: rgba(255, 255, 255, 1);
-}
-
-.tab {
-  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.6) 50%, rgba(255, 255, 255, 0.3) 25%, transparent 50%, transparent);
-  background-position: 0 0;
-  background-size: 200% 100%;
-  transition: all .25s ease-in;
-}
-
-.tab:hover {
-  background-position: 100% 0;
-}
-
-.tab:hover .tab-skill h5 {
-  /* color: rgb(65, 65, 65); */
-}
-
-.content {
-  display: none;
-}
-
-.content-active {
-  display: block;
-}
-
-@media (max-width: 960px) {
-  .container {
-    width: 700px;
-  }
-}
-@media (max-width: 720px) {
-  .container {
-    width: 500px;
-  }
-}
-@media (max-width: 540px) {
-  .container {
-    width: 300px;
+  .hello {
+    width: 80%;
+    margin: 8px auto;
+    padding: 0px 8px;
   }
 
-  h1 {
-    font-size: 1.5em;
+  .hello h1,
+  .dev h2 {
+    font-size: 1.3rem;
   }
 
-  h2 {
-    font-size: 1.2em;
+  .tab {
+    width: 32%;
   }
 
-  .list-inline > li {
+  .tab h3 {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .underscore {
+    width: 32%;
+  }
+
+  .content-container {
     display: block;
-    padding: 0px 20px;
-    font-size: 2em;
-    margin: 10px 0;
   }
+
+  .banner {
+    width: auto;
+    height: 320px;
+  }
+
+  #separator {
+    display: block;
+  }
+
+  .curriculum {
+    border: none;
+    position: static;
+    margin: 32px 0 0 0;
+    padding: 0;
+  }
+
+  .curriculum a {
+    position: static;
+    margin: 0 16px;
+  }
+
+  .curriculum img {
+    width: 64px;
+  }
+
+  .content-form {
+    width: auto;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  .tab h3 {
+    font-size: 0.7rem;
+  }
+
 }

@@ -15,58 +15,98 @@
 
     <div class="container">
 
-      <div class="sidebar">
-        <img class="img-round" id="img-profile" src="images/antoinegaillard1.jpg" alt="portrait antoine gaillard">
-        <h2>Get in touch</h2>
-        <ul class="list-inline">
-          <li><a href="https://www.facebook.com/antoine.gaillard.fne"><i class="fab fa-facebook-square"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/agaillardparis/"><i class="fab fa-linkedin"></i></a></li>
-          <li><a href="https://github.com/ghostinthemuf"><i class="fab fa-github-alt"></i></a></li>
-        </ul>
-        <a href="https://www.agaillard.fr" class="btn-red">My projects</a>
+      <img class="img-round" src="images/antoinegaillard1.jpg" alt="portrait antoine gaillard">
+
+      <div class="hello">
+        <h1>Hello 👋🏻<br>Je m'appelle Antoine Gaillard</h1>
       </div>
 
       <div class="main">
-        <h1>Bonjour, je m'appelle Antoine Gaillard</h1>
-        <h2>Je suis développeur web fullstack</h2>
-        <p>Après 10 ans au service de la communication d’ONG environnementales, j’ai décidé de faire de ma passion pour le code mon nouveau métier. Ayant suivi le bootcamp du Wagon Paris, je suis désormais à la recherche d’opportunités en matière de développement web back et front, avec une attention particulière pour le secteur de la tech for good.</p>
-        <div class="tab tab-active" id="competences-title" data-domain="competences">
-          <div class="tab-int">
-            <div class="tab-icon"><i class="fas fa-brain"></i></div>
-            <div class="tab-skill"><h5>Compétences</h5></div>
+
+        <div class="dev">
+          <img src="images/icons8-ruby-programming-language.svg" alt="Icône Ruby">
+          <h2>Je suis développeur web fullstack</h2>
+          <img src="images/icons8-react.svg" alt="Icône React">
+        </div>
+
+        <p>Après 10 ans au service de la communication d’ONG environnementales, j’ai décidé de faire de ma passion pour le code mon nouveau métier. Ayant suivi le bootcamp du <strong>Wagon</strong> à Paris, je suis désormais à la recherche d’opportunités en matière de développement web back et front, avec une attention particulière pour le secteur de la <em>tech for good</em>.</p>
+
+        <div class="tabs">
+          <div class="tab tab-active" id="competences-title" data-domain="realisations">
+            <h3>réalisations</h3>
+          </div>
+          <div class="tab" id="realisations-title" data-domain="competences">
+            <h3>compétences</h3>
+          </div>
+          <div class="tab" id="formation-title" data-domain="formation">
+            <h3>formation</h3>
+          </div>
+          <div class="underscore"></div>
+        </div>
+
+        <div class="content content-active" id="realisations">
+          <div class="content-container" id="content-container-real">
+            <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/mdej.jpg);">
+              <div class="banner-content">
+                <h3>Maison des droits des enfants et des jeunes</h3>
+                <p>Lieu d’écoute et d’information, d’accès au droit pour les mineurs et jeunes majeurs, de médiation familiale et de formation.</p>
+                <p class="project-type"><em>Site Wordpress</em></p>
+                <a class="btn-flat" href="https://www.droitsetenfants.org/" target="_blank">Découvrir</a>
+              </div>
+            </div>
+            <div id="separator"></div>
+            <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/doog.jpg);">
+              <div class="banner-content">
+                <h3>Doog</h3>
+                <p>Projet fictif de plateforme proposant des défis numériques techniques à relever pour aider des projets sociaux et solidaires.</p>
+                <p class="project-type"><em>Application Ruby on Rails</em></p>
+                <a class="btn-flat" href="https://doogs-project.herokuapp.com/" target="_blank">Découvrir</a>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="tab" id="realisations-title" data-domain="realisations">
-          <div class="tab-int">
-            <div class="tab-icon"><i class="fas fa-laptop"></i></div>
-            <div class="tab-skill"><h5>Réalisations</h5></div>
+
+        <div class="content" id="competences">
+          <div class="content-container" id="content-container-comp">
+            <div>
+              <h3 style="margin-top: 0;">Développement web</h3>
+              <ul>
+                <li>Backend : Ruby on Rails, SQL, Heroku</li>
+                <li>Frontend : Javascript ES2015, React JS, HTML, CSS, Bootstrap</li>
+              </ul>
+              <h3>Chef de projet web</h3>
+              <ul>
+                <li>Rédaction cahier des charges et appel à projets</li>
+                <li>Suivi de la conception de sites Wordpress & Drupal</li>
+                <li>Administration, visibilité et référencement</li>
+              </ul>
+            </div>
+            <div class="curriculum">
+              <a href="/images/CV_antoine_gaillard_2019.pdf" download><img src="images/pdf.svg" alt="Icône PDF"></a>
+              <h4>Télécharger<br>mon CV complet</h4>
+            </div>
           </div>
         </div>
-        <div class="tab" id="formation-title" data-domain="formation">
-          <div class="tab-int">
-            <div class="tab-icon"><i class="fas fa-user-graduate"></i></div>
-            <div class="tab-skill"><h5>Formation</h5></div>
-          </div>
-        </div>
-        <div class="content content-active" id="competences">
-          <h3>Développement web</h3>
-          <ul>
-            <li>Backend : Ruby on Rails, SQL, Heroku</li>
-            <li>Frontend : Javascript ES2015, React JS, HTML, CSS, Bootstrap</li>
-          </ul>
-          <h3>Chef de projet web</h3>
-          <ul>
-            <li>Rédaction cahier des charges et appel à projets</li>
-            <li>Suivi de la conception de sites Wordpress & Drupal</li>
-            <li>Administration, visibilité et référencement</li>
-          </ul>
-        </div>
-        <div class="content" id="realisations">
-          <p>The Paris area is one of the largest population centers in Europe, with more than 12 million inhabitants.</p>
-        </div>
+
         <div class="content" id="formation">
-          <p>It is the center of the Greater Tokyo Area, and the most populous metropolitan area in the world.</p>
+          <div class="content-container" id="content-container-form">
+            <div class="content-form">
+              <img src="images/certif.png" alt="Certification développeur">
+            </div>
+            <div class="content-form">
+              <p>A l'été 2019, j'ai suivi le programme du Wagon Paris, batch #290 : un bootcamp de 9 semaines intensives pour apprendre à coder et maîtriser HTML, CSS, Bootstrap, JavaScript ES2015, SQL, git, GitHub, Heroku et Ruby on Rails. A cette occasion et au sein d'une équipe projet, j'ai imaginé, développé et livré pour production un clone d'AirBnB et <a href="https://doogs-project.herokuapp.com/" target="_blank">une application Rails originale</a>.</p>
+            </div>
+          </div>
         </div>
+
+      </div>
+
+      <div class="footer">
+        <ul class="list-inline">
+          <li><a href="https://www.linkedin.com/in/agaillardparis/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
+          <li><a href="https://www.facebook.com/antoine.gaillard.dev" target="_blank"><i class="fab fa-facebook-square"></i></a></li>
+          <li><a href="https://github.com/ghostinthemuf" target="_blank"><i class="fab fa-github-alt"></i></a></li>
+        </ul>
       </div>
 
     </div>
