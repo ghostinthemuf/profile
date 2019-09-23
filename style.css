@@ -167,7 +167,7 @@ a {
 
 #content-container-real,
 #content-container-form {
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .banner {
